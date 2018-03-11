@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 20px;
+}
+h1 {
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.job a {
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0 0 10px 0;
+  text-decoration: none;
+  color: black;
+}
+.job a:hover {
+  background: #eee;
+}
+.job a span {
+  margin: 0 2px;
+}
+.job a span:first-child {
+  font-weight: 900;
+}

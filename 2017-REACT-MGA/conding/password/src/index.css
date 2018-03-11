@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+body {
+  background: #EF767A;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+
+#container {
+  height: 100vh;
+}
+
+.rules,
+.app,
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#container,
+.app {
+  align-items: center;
+}
+
+.app {
+  flex-direction: column;
+  height: 400px;
+}
+.app ul {
+  padding: 0;
+}
+.app li {
+  color: #FFDBB5;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 5px;
+}
+.app .passed {
+  color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s all;
+  text-decoration: line-through;
+}
+.app .missing {
+  color: #FFDBB5;
+  transition: 0.4s all;
+}
+
+.rules {
+  width: 330px;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+input {
+  background: none;
+  width: 260px;
+  border-bottom: 3px solid #FFDBB5;
+  color: white;
+  font-size: 27px;
+  transition: 0.4s all;
+  text-align: center;
+}
+input:focus {
+  width: 330px;
+  transition: 0.4s all;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+button {
+  background: #FFDBB5;
+  width: 120px;
+  height: 30px;
+  font-size: 15px;
+  color: #EF767A;
+  border-radius: 4px;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  transition: 0.4s all;
+}
+button:disabled:hover {
+  animation: 500ms shake;
+}
+button:hover {
+  animation: 500ms nod infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes nod {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 13px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+footer a {
+  color: #FFDBB5;
+}
